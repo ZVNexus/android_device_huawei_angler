@@ -25,50 +25,50 @@ TARGET_USES_CHINOOK_SENSORHUB := false
 PRODUCT_SHIPPING_API_LEVEL := 23
 
 PRODUCT_COPY_FILES += \
-    $(PLATFORM_PATH)/rootdir/init.angler.rc:root/init.angler.rc \
-    $(PLATFORM_PATH)/rootdir/init.angler.usb.rc:root/init.angler.usb.rc \
-    $(PLATFORM_PATH)/rootdir/fstab.angler:root/fstab.angler \
-    $(PLATFORM_PATH)/rootdir/ueventd.angler.rc:root/ueventd.angler.rc \
-    $(PLATFORM_PATH)/rootdir/init.recovery.angler.rc:root/init.recovery.angler.rc \
-    $(PLATFORM_PATH)/rootdir/init.angler.power.sh:system/bin/init.angler.power.sh \
-    $(PLATFORM_PATH)/rootdir/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl \
-    $(PLATFORM_PATH)/rootdir/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc \
-    $(PLATFORM_PATH)/rootdir/init.qcom.devwait.sh:system/bin/init.qcom.devwait.sh \
-    $(PLATFORM_PATH)/rootidr/init.qcom.devstart.sh:system/bin/init.qcom.devstart.sh
+    $(PLATFORM_PATH)/rootdir/init.angler.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.angler.rc \
+    $(PLATFORM_PATH)/rootdir/init.angler.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.angler.usb.rc \
+    $(PLATFORM_PATH)/rootdir/fstab.angler:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.angler \
+    $(PLATFORM_PATH)/rootdir/ueventd.angler.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.angler.rc \
+    $(PLATFORM_PATH)/rootdir/init.recovery.angler.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.recovery.angler.rc \
+    $(PLATFORM_PATH)/rootdir/init.angler.power.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.angler.power.sh \
+    $(PLATFORM_PATH)/rootdir/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
+    $(PLATFORM_PATH)/rootdir/uinput-fpc.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-fpc.idc \
+    $(PLATFORM_PATH)/rootdir/init.qcom.devwait.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devwait.sh \
+    $(PLATFORM_PATH)/rootidr/init.qcom.devstart.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devstart.sh
 
 PRODUCT_COPY_FILES += \
-    $(PLATFORM_PATH)/rootdir/init.angler.nanohub.rc:root/init.angler.sensorhub.rc
+    $(PLATFORM_PATH)/rootdir/init.angler.nanohub.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.angler.sensorhub.rc
 
 PRODUCT_COPY_FILES += \
-    $(PLATFORM_PATH)/rootdir/init.mcfg.sh:system/bin/init.mcfg.sh
+    $(PLATFORM_PATH)/rootdir/init.mcfg.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mcfg.sh
 
 PRODUCT_COPY_FILES += \
-    $(PLATFORM_PATH)/rootdir/init.radio.sh:system/bin/init.radio.sh
+    $(PLATFORM_PATH)/rootdir/init.radio.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.radio.sh
 
 # Thermal configuration
 PRODUCT_COPY_FILES += \
-    $(PLATFORM_PATH)/thermal-engine/thermal-engine-angler.conf:system/etc/thermal-engine.conf
+    $(PLATFORM_PATH)/thermal-engine/thermal-engine-angler.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
 # Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    $(PLATFORM_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml \
-    $(PLATFORM_PATH)/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    $(PLATFORM_PATH)/media/media_profiles.xml:system/etc/media_profiles.xml
+    $(PLATFORM_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    $(PLATFORM_PATH)/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    $(PLATFORM_PATH)/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
 
 # Audio
 PRODUCT_COPY_FILES += \
     $(PLATFORM_PATH)/audio/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
     $(PLATFORM_PATH)/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
-    $(PLATFORM_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
-    $(PLATFORM_PATH)/audio/audio_platform_info_i2s.xml:system/etc/audio_platform_info_i2s.xml \
-    $(PLATFORM_PATH)/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
-    $(PLATFORM_PATH)/audio/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
-    $(PLATFORM_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
-    $(PLATFORM_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
-    $(PLATFORM_PATH)/audio/audio_policy_volumes_drc.xml:system/etc/audio_policy_volumes_drc.xml \
+    $(PLATFORM_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    $(PLATFORM_PATH)/audio/audio_platform_info_i2s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_i2s.xml \
+    $(PLATFORM_PATH)/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
+    $(PLATFORM_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml \
+    $(PLATFORM_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
+    $(PLATFORM_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(PLATFORM_PATH)/audio/audio_policy_volumes_drc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes_drc.xml \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:system/etc/a2dp_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:system/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml \
@@ -76,9 +76,9 @@ PRODUCT_COPY_FILES += \
 
 # Input device files
 PRODUCT_COPY_FILES += \
-    $(PLATFORM_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    $(PLATFORM_PATH)/keylayout/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl \
-    $(PLATFORM_PATH)/keylayout/synaptics_dsx.idc:system/usr/idc/synaptics_dsx.idc
+    $(PLATFORM_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
+    $(PLATFORM_PATH)/keylayout/qpnp_pon.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/qpnp_pon.kl \
+    $(PLATFORM_PATH)/keylayout/synaptics_dsx.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/synaptics_dsx.idc
 
 # Fingerprint Sensor
 PRODUCT_PACKAGES += \
@@ -100,11 +100,11 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_COPY_FILES += \
-    $(PLATFORM_PATH)/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
-    $(PLATFORM_PATH)/wifi/bcmdhd-pme.cal:system/etc/wifi/bcmdhd-pme.cal \
-    $(PLATFORM_PATH)/wifi/bcmdhd-high.cal:system/etc/wifi/bcmdhd-high.cal \
-    $(PLATFORM_PATH)/wifi/bcmdhd-low.cal:system/etc/wifi/bcmdhd-low.cal \
-    $(PLATFORM_PATH)/wifi/filter_ie:system/etc/wifi/filter_ie
+    $(PLATFORM_PATH)/wifi/bcmdhd.cal:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bcmdhd.cal \
+    $(PLATFORM_PATH)/wifi/bcmdhd-pme.cal:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bcmdhd-pme.cal \
+    $(PLATFORM_PATH)/wifi/bcmdhd-high.cal:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bcmdhd-high.cal \
+    $(PLATFORM_PATH)/wifi/bcmdhd-low.cal:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bcmdhd-low.cal \
+    $(PLATFORM_PATH)/wifi/filter_ie:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/filter_ie
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -152,7 +152,7 @@ PRODUCT_COPY_FILES += \
 
 # Qseecomd configuration file
 PRODUCT_COPY_FILES += \
-    $(PLATFORM_PATH)/rootdir/init.angler.qseecomd.sh:system/bin/init.angler.qseecomd.sh
+    $(PLATFORM_PATH)/rootdir/init.angler.qseecomd.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.angler.qseecomd.sh
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -337,8 +337,8 @@ PRODUCT_PACKAGES += \
 endif
 
 PRODUCT_COPY_FILES += \
-    $(PLATFORM_PATH)/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf \
-    $(PLATFORM_PATH)/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
+    $(PLATFORM_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
+    $(PLATFORM_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
 DEVICE_PACKAGE_OVERLAYS := \
     $(PLATFORM_PATH)/overlay
@@ -495,14 +495,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.image-dex2oat-threads=4
 
 PRODUCT_COPY_FILES += \
-    $(PLATFORM_PATH)/rootdir/init.angler.diag.rc.userdebug:root/init.angler.diag.rc
+    $(PLATFORM_PATH)/rootdir/init.angler.diag.rc.userdebug:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.angler.diag.rc
 
 # subsystem ramdump collection
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.ssr.enable_ramdumps=0
 else # userdebug eng
 PRODUCT_COPY_FILES += \
-    $(PLATFORM_PATH)/rootdir/init.angler.diag.rc.user:root/init.angler.diag.rc
+    $(PLATFORM_PATH)/rootdir/init.angler.diag.rc.user:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.angler.diag.rc
 endif # userdebug eng
 
 # Incoming number (b/23529711)
@@ -537,7 +537,7 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4358
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-    $(PLATFORM_PATH)/configs/gps.conf:system/etc/gps.conf:qcom
+    $(PLATFORM_PATH)/configs/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf:qcom
 
 # services for encryption
 PRODUCT_PACKAGES += \
